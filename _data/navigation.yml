@@ -1,4 +1,7 @@
 header:
+  - title: 카테고리
+    url: /categories.html
+
   - titles:
       # @start locale config
       en      : &EN       Archive

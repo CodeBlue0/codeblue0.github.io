@@ -1,0 +1,33 @@
+---
+layout: page
+title: 카테고리
+---
+
+{%- assign _top_categories = "" | split: "" -%}
+{%- for _post in site.posts -%}
+  {%- assign _top_categories = _top_categories | push: _post.categories[0] -%}
+{%- endfor -%}
+{%- assign _top_categories = _top_categories | uniq | sort -%}
+
+<div class="layout--archive">
+  {%- for _top in _top_categories -%}
+    {%- assign _top_posts = site.posts | where_exp: "post", "post.categories[0] == _top" -%}
+    <h2 id="{{ _top | slugify }}">{{ _top }} <small>({{ _top_posts.size }})</small></h2>
+
+    {%- assign _no_sub = _top_posts | where_exp: "post", "post.categories.size == 1" -%}
+    {%- if _no_sub.size > 0 -%}
+      {%- include article-list.html articles=_no_sub type='brief' show_info=true -%}
+    {%- endif -%}
+
+    {%- assign _subs = "" | split: "" -%}
+    {%- for _post in _top_posts -%}
+      {%- if _post.categories.size > 1 -%}{%- assign _subs = _subs | push: _post.categories[1] -%}{%- endif -%}
+    {%- endfor -%}
+    {%- assign _subs = _subs | uniq | sort -%}
+    {%- for _sub in _subs -%}
+      {%- assign _sub_posts = _top_posts | where_exp: "post", "post.categories[1] == _sub" -%}
+      <h3 id="{{ _top | slugify }}-{{ _sub | slugify }}">{{ _sub }} <small>({{ _sub_posts.size }})</small></h3>
+      {%- include article-list.html articles=_sub_posts type='brief' show_info=true -%}
+    {%- endfor -%}
+  {%- endfor -%}
+</div>
