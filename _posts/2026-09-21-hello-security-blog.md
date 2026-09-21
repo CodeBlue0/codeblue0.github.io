@@ -2,8 +2,11 @@
 title: 블로그를 시작하며
 date: 2026-09-21 10:00:00 +0900
 categories: [Roadmap]
-tags: [roadmap, pentest]
+tags: [ai-generated, roadmap, pentest]
 ---
+
+이 글은 AI(Claude)가 작성했습니다.
+{:.warning}
 
 금융권 모의해킹 컨설턴트를 목표로 공부한 내용을 기록하려고 블로그를 시작합니다.
 

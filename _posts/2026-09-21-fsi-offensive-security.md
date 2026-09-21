@@ -2,8 +2,11 @@
 title: 금융보안원 Offensive Security 직무 이해하기
 date: 2026-09-21 12:00:00 +0900
 categories: [Career, Job]
-tags: [금융보안원, 모의해킹, 악성코드분석, red-team]
+tags: [ai-generated, 금융보안원, 모의해킹, 악성코드분석, red-team]
 ---
+
+이 글은 AI(Claude)가 작성했습니다.
+{:.warning}
 
 > 공개된 채용 공고와 보도자료를 바탕으로 정리했습니다. 세부 일정과 조건은 반드시 공식 공고를 확인하세요.
 {:.info}

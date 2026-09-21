@@ -2,8 +2,11 @@
 title: HTB CPTS 22주 학습 계획
 date: 2026-09-21 11:00:00 +0900
 categories: [Career, Certification]
-tags: [cpts, hackthebox, study-plan]
+tags: [ai-generated, cpts, hackthebox, study-plan]
 ---
+
+이 글은 AI(Claude)가 작성했습니다.
+{:.warning}
 
 HackTheBox의 모의해킹 자격증인 **CPTS(Certified Penetration Testing Specialist)**를 준비합니다.
 주당 12~15시간씩 공부해서 22주 동안 Academy 경로를 끝내고 시험을 보는 것이 목표입니다.
