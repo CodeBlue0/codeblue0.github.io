@@ -43,7 +43,11 @@ layout: base
     <div class="grid page__grid">
 
       <div class="page__sidebar d-print-none">
-        {%- include sidebar/toc.html -%}
+        {%- if page.sidebar.type == 'blog' -%}
+          {%- include sidebar/blog.html -%}
+        {%- else -%}
+          {%- include sidebar/toc.html -%}
+        {%- endif -%}
       </div>
 
 {%- else -%}

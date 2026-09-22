@@ -53,15 +53,3 @@ header:
       tr      : &TR       Hakkında
       # @end locale config
     url: /about.html
-
-blog:
-  - title:      Roadmap
-    children:
-      - title:  블로그를 시작하며
-        url:    /roadmap/2026/09/21/hello-security-blog.html
-  - title:      Career
-    children:
-      - title:  HTB CPTS 22주 학습 계획
-        url:    /career/certification/2026/09/21/cpts-study-plan.html
-      - title:  금융보안원 Offensive Security 직무 이해하기
-        url:    /career/job/2026/09/21/fsi-offensive-security.html

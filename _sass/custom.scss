@@ -1,3 +1,109 @@
 /* start custom scss snippet */
 
+/* Blog sidebar (_includes/sidebar/blog.html) */
+.page__sidebar {
+  background-color: mix(#000, $background-color, 2%);
+}
+
+.blog-sidebar {
+  padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 5);
+  font-size: map-get($base, font-size-sm);
+  color: $text-color;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+    &:hover { color: $main-color-1; }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.blog-sidebar__profile {
+  text-align: center;
+  margin-bottom: map-get($spacers, 3);
+}
+.blog-sidebar__avatar {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto map-get($spacers, 2);
+  border-radius: 50%;
+  object-fit: cover;
+}
+.blog-sidebar__name {
+  margin: 0;
+  font-weight: map-get($base, font-weight-bold);
+  color: $text-color-d;
+}
+.blog-sidebar__bio {
+  margin: .2rem 0 0;
+  font-size: map-get($base, font-size-xs);
+  color: $text-color-l;
+}
+
+.blog-sidebar__search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: map-get($spacers, 4);
+  padding: .45rem .75rem;
+  font: inherit;
+  color: $text-color-l;
+  background-color: $background-color;
+  border: 1px solid $border-color-l;
+  border-radius: map-get($base, border-radius);
+  cursor: pointer;
+  i { margin-right: .5rem; }
+  &:hover { border-color: $border-color; }
+}
+
+.blog-sidebar__section {
+  margin-bottom: map-get($spacers, 4);
+}
+.blog-sidebar__all,
+.blog-sidebar__heading {
+  display: block;
+  margin: 0 0 .5rem;
+  font-size: map-get($base, font-size-xs);
+  font-weight: map-get($base, font-weight-bold);
+  color: $text-color-d;
+}
+.blog-sidebar__count {
+  color: $text-color-l;
+  font-size: map-get($base, font-size-xs);
+}
+
+.blog-sidebar__categories,
+.blog-sidebar__menu {
+  li { padding: .25rem 0; }
+}
+.blog-sidebar__category {
+  details > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    cursor: pointer;
+    &::-webkit-details-marker { display: none; }
+  }
+  details[open] .blog-sidebar__chevron { transform: rotate(90deg); }
+  &.active > a,
+  &.active > details > summary > a {
+    font-weight: map-get($base, font-weight-bold);
+  }
+}
+.blog-sidebar__chevron {
+  font-size: map-get($base, font-size-xs);
+  color: $text-color-l;
+  transition: transform .15s;
+}
+.blog-sidebar__subcategories {
+  padding-left: map-get($spacers, 3) !important;
+  li.active > a { color: $main-color-1; }
+}
+
 /* end custom scss snippet */
