@@ -1,5 +1,6 @@
 ---
 layout: article
+article_header: false
 aside:
   toc: true
 titles:
@@ -29,6 +30,7 @@ key: page-about
 ---
 
 {%- assign p = site.data.profile -%}
+<div class="about">
 {%- include snippets/get-nav-url.html path=site.author.avatar -%}
 <div class="about-card">
   <img src="{{ __return }}" alt="{{ p.name }}" />
@@ -100,3 +102,4 @@ key: page-about
   <li><strong>{{ _g.group }}</strong>: {{ _g.items | join: ", " }}</li>
 {%- endfor -%}
 </ul>
+</div>

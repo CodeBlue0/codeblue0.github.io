@@ -141,4 +141,23 @@
   .about-card { flex-direction: column; text-align: center; }
 }
 
+/* Compact headings on the about page */
+.about {
+  h2 {
+    margin: 2rem 0 .7rem;
+    padding-bottom: .3rem;
+    font-size: 1.2rem;
+  }
+  h3 {
+    margin: 1.1rem 0 .35rem;
+    font-size: 1rem;
+  }
+  p, li, td, th { font-size: map-get($base, font-size-sm); }
+  ul { margin-top: .3rem; margin-bottom: .3rem; }
+  table { margin: .4rem 0 0; }
+  .about-meta { margin: 0 0 .3rem !important; font-size: map-get($base, font-size-xs); }
+  .about-card { margin-top: 2rem; }
+  .about-card .about-card__name { font-size: 1.25rem; }
+}
+
 /* end custom scss snippet */
