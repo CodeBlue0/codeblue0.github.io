@@ -1,0 +1,136 @@
+# About page content (rendered by about.html). Edit text here; the layout stays the same.
+
+name: 강필중
+name_en: Philjoong Kang
+role: Offensive Security Learner
+tagline: 공격자의 시선으로 취약점을 찾고, 방어로 이어지는 보고서를 씁니다.
+
+about:
+  - 고려대학교 스마트보안학부에 재학 중이며, 금융권 모의해킹 컨설턴트를 목표로 공부하고 있습니다.
+  - 공군 CERT에서 보안 로그를 분석하고 부대 정보보호 정책을 관리했습니다. 개발 프로젝트와 연구 인턴 경험을 바탕으로, 시스템이 어떻게 만들어지는지 알고 그 빈틈을 찾는 보안 엔지니어가 되고자 합니다.
+interests: [Web Hacking, Active Directory, Malware Analysis, AI Security, CTF]
+
+experience:
+  - org: 서울대학교 데이터사이언스대학원 AIoT Lab
+    role: 연구 인턴
+    period: "2026.03 ~ 2026.08"
+    items:
+      - 로봇 인지를 위한 깊이 추정 실험에서 Sim-to-Real 격차 분석
+      - Gaussian Splatting 기반 시뮬레이션 실험 환경 구축
+    tags: [Gaussian Splatting, PyTorch, Research]
+  - org: 공군 CERT
+    role: 정보보호병
+    period: "2024.03 ~ 2025.12"
+    items:
+      - 시스템 로그 분석을 통한 보안 위협 탐지
+      - 부대 정보보호 정책 관리
+    tags: [CERT, Log Analysis, Security Policy]
+  - org: 성빈수학학원
+    role: 조교
+    period: "2021.05 ~ 2022.01"
+    items:
+      - 학생 문제 풀이 지도 및 수업 운영 보조
+    tags: [Teaching]
+
+projects:
+  - name: 말씨
+    desc: 언어 교정 스마트 웨어러블
+    role: 백엔드
+    period: "2025.05 ~ 2025.10"
+    items:
+      - Perplexity LLM을 활용해 비속어를 탐지하고 순화 표현을 제안하는 API 개발
+      - 사업계획서·발표 자료 작성, 대회 질의응답 담당
+    tags: [LLM API, Backend]
+  - name: 개발자 데일리 학습 기록 커뮤니티
+    desc: 소프트웨어 마에스트로 프로젝트
+    role: 프론트엔드
+    period: "2023.07 ~ 2023.12"
+    items:
+      - Next.js, Supabase 기반 학습 기록 플랫폼 개발
+      - Vercel 배포, Amplitude로 사용자 행동 분석
+    tags: [Next.js, Supabase, Vercel]
+  - name: 사진 포즈 추천 서비스
+    desc: 촬영 포즈 추천 웹 서비스
+    role: 프론트엔드
+    period: "2022.12 ~ 2023.03"
+    items:
+      - React 기반 웹 서비스 개발
+    tags: [React]
+  - name: 맞춤형 보행 교정 시스템
+    desc: ICT 융합 프로젝트 공모전 금상
+    role: 모바일 앱
+    period: "2022.01 ~ 2022.03"
+    items:
+      - Flutter로 압력 센서와 블루투스 통신하는 보행 교정 앱 프로토타입 개발
+    tags: [Flutter, Bluetooth, IoT]
+
+activities:
+  - org: CAUtion
+    desc: 중앙대학교 보안 동아리
+    role: CTF 출제자
+    period: "2022.03 ~ 2023.02"
+    items:
+      - 동아리 CTF 대회의 웹·시스템 해킹 문제 출제
+  - org: ChAOS
+    desc: 중앙대학교 알고리즘 동아리
+    role: 부회장
+    period: "2021.03 ~ 2023.02"
+    items:
+      - 2023 CHAC 검수 및 스태프, COSMOS 캠프 교내 알고리즘 대회 운영
+  - org: 소프트웨어 마에스트로
+    desc: 과학기술정보통신부
+    role: 연수생
+    period: "2023.07 ~ 2023.12"
+    items:
+      - 애자일 스프린트 방식으로 서비스 개발
+
+education:
+  - school: 고려대학교
+    major: 스마트보안학부
+    period: "2023.03 ~"
+  - school: 중앙대학교
+    major: 소프트웨어학부
+    period: "2021.03 ~ 2023.02"
+
+awards:
+  - year: 2025
+    title: 창의상
+    event: 국방 스타트업 챌린지
+  - year: 2022
+    title: 대상 (1위)
+    event: 제2회 Uni-DTHON
+  - year: 2022
+    title: 금상
+    event: 2022 ICT 융합 프로젝트 공모전
+  - year: 2019
+    title: 동상
+    event: 제4회 국민대학교 알고리즘 대회
+  - year: 2019
+    title: 동상
+    event: 제36회 한국정보올림피아드 1차 (일반고부)
+
+certifications:
+  - name: 정보처리산업기사
+    issuer: 한국산업인력공단
+    date: "2025.07"
+  - name: TOPCIT 618 / 1000
+    issuer: 정보통신기획평가원
+    date: "2023.10"
+
+skills:
+  - group: Language
+    items: [Python, C, Dart]
+  - group: Web & Mobile
+    items: [Next.js, React, Electron, Flutter]
+  - group: AI
+    items: [PyTorch]
+  - group: Etc
+    items: [Unity, Arduino]
+
+contact:
+  - label: GitHub
+    icon: fab fa-github
+    url: https://github.com/CodeBlue0
+  - label: RSS
+    icon: fas fa-rss
+    url: /feed.xml

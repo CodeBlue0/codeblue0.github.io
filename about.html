@@ -1,0 +1,153 @@
+---
+layout: page
+full_width: true
+article_header: false
+titles:
+  # @start locale config
+  en      : &EN       About
+  en-GB   : *EN
+  en-US   : *EN
+  en-CA   : *EN
+  en-AU   : *EN
+  zh-Hans : &ZH_HANS  关于
+  zh      : *ZH_HANS
+  zh-CN   : *ZH_HANS
+  zh-SG   : *ZH_HANS
+  zh-Hant : &ZH_HANT  關於
+  zh-TW   : *ZH_HANT
+  zh-HK   : *ZH_HANT
+  ko      : &KO       소개
+  ko-KR   : *KO
+  fr      : &FR       À propos
+  fr-BE   : *FR
+  fr-CA   : *FR
+  fr-CH   : *FR
+  fr-FR   : *FR
+  fr-LU   : *FR
+  # @end locale config
+key: page-about
+---
+
+{%- assign p = site.data.profile -%}
+<div class="profile">
+
+  <section class="profile__hero">
+    <h1 class="profile__name">{{ p.name }}</h1>
+    <p class="profile__role">{{ p.role }}</p>
+    <p class="profile__tagline">{{ p.tagline }}</p>
+    <div class="profile__actions">
+      <a class="profile__btn" href="#experience">경력 보기</a>
+      <a class="profile__btn profile__btn--primary" href="#contact">연락하기</a>
+    </div>
+    <nav class="profile__nav">
+      <a href="#about">소개</a><a href="#experience">경력</a><a href="#projects">프로젝트</a><a href="#activities">활동</a><a href="#awards">수상·자격</a><a href="#skills">기술</a><a href="#contact">연락처</a>
+    </nav>
+  </section>
+
+  <section class="profile__section" id="about">
+    <p class="profile__label">01 / About</p>
+    <h2 class="profile__title">소개</h2>
+    {%- for _line in p.about -%}<p class="profile__text">{{ _line }}</p>{%- endfor -%}
+    <ul class="profile__chips">{%- for _t in p.interests -%}<li>{{ _t }}</li>{%- endfor -%}</ul>
+    <div class="profile__edu">
+      {%- for _e in p.education -%}
+      <div><strong>{{ _e.school }}</strong> {{ _e.major }} <span class="profile__mono">{{ _e.period }}</span></div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="profile__section" id="experience">
+    <p class="profile__label">02 / Experience</p>
+    <h2 class="profile__title">경력</h2>
+    <div class="profile__timeline">
+      {%- for _x in p.experience -%}
+      <div class="profile__entry">
+        <div class="profile__period profile__mono">{{ _x.period }}</div>
+        <div class="profile__card">
+          <h3>{{ _x.org }}</h3>
+          <p class="profile__sub">{{ _x.role }}</p>
+          <ul class="profile__list">{%- for _i in _x.items -%}<li>{{ _i }}</li>{%- endfor -%}</ul>
+          <ul class="profile__tags">{%- for _t in _x.tags -%}<li>{{ _t }}</li>{%- endfor -%}</ul>
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="profile__section" id="projects">
+    <p class="profile__label">03 / Projects</p>
+    <h2 class="profile__title">프로젝트</h2>
+    <div class="profile__grid">
+      {%- for _x in p.projects -%}
+      <div class="profile__card">
+        <p class="profile__period profile__mono">{{ _x.period }}</p>
+        <h3>{{ _x.name }}</h3>
+        <p class="profile__sub">{{ _x.desc }} · {{ _x.role }}</p>
+        <ul class="profile__list">{%- for _i in _x.items -%}<li>{{ _i }}</li>{%- endfor -%}</ul>
+        <ul class="profile__tags">{%- for _t in _x.tags -%}<li>{{ _t }}</li>{%- endfor -%}</ul>
+      </div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="profile__section" id="activities">
+    <p class="profile__label">04 / Activities</p>
+    <h2 class="profile__title">활동</h2>
+    <div class="profile__grid profile__grid--3">
+      {%- for _x in p.activities -%}
+      <div class="profile__card">
+        <p class="profile__period profile__mono">{{ _x.period }}</p>
+        <h3>{{ _x.org }}</h3>
+        <p class="profile__sub">{{ _x.desc }} · {{ _x.role }}</p>
+        <ul class="profile__list">{%- for _i in _x.items -%}<li>{{ _i }}</li>{%- endfor -%}</ul>
+      </div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="profile__section" id="awards">
+    <p class="profile__label">05 / Awards &amp; Certifications</p>
+    <h2 class="profile__title">수상·자격</h2>
+    <div class="profile__grid">
+      <div class="profile__card">
+        <h3>수상</h3>
+        <ul class="profile__rows">
+          {%- for _a in p.awards -%}
+          <li><span class="profile__mono">{{ _a.year }}</span><span><strong>{{ _a.title }}</strong><em>{{ _a.event }}</em></span></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      <div class="profile__card">
+        <h3>자격증</h3>
+        <ul class="profile__rows">
+          {%- for _c in p.certifications -%}
+          <li><span class="profile__mono">{{ _c.date }}</span><span><strong>{{ _c.name }}</strong><em>{{ _c.issuer }}</em></span></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="profile__section" id="skills">
+    <p class="profile__label">06 / Skills</p>
+    <h2 class="profile__title">기술</h2>
+    <div class="profile__skills">
+      {%- for _g in p.skills -%}
+      <div><p class="profile__sub">{{ _g.group }}</p><ul class="profile__chips">{%- for _t in _g.items -%}<li>{{ _t }}</li>{%- endfor -%}</ul></div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="profile__section profile__contact" id="contact">
+    <p class="profile__label">07 / Contact</p>
+    <h2 class="profile__title">연락처</h2>
+    <p class="profile__text">채용, 협업, 스터디 모두 편하게 연락 주세요.</p>
+    <div class="profile__actions">
+      {%- for _c in p.contact -%}
+      {%- include snippets/get-nav-url.html path=_c.url -%}
+      <a class="profile__btn" href="{{ __return }}"><i class="{{ _c.icon }}"></i> {{ _c.label }}</a>
+      {%- endfor -%}
+    </div>
+  </section>
+
+</div>
