@@ -27,14 +27,6 @@ experience:
     tags: [CERT, Log Analysis, Security Policy]
 
 projects:
-  - name: 말씨
-    desc: 언어 교정 스마트 웨어러블
-    role: 백엔드
-    period: "2025.05 ~ 2025.10"
-    items:
-      - Perplexity LLM을 활용해 비속어를 탐지하고 순화 표현을 제안하는 API 개발
-      - 사업계획서·발표 자료 작성, 대회 질의응답 담당
-    tags: [LLM API, Backend]
   - name: 개발자 데일리 학습 기록 커뮤니티
     desc: 소프트웨어 마에스트로 프로젝트
     role: 프론트엔드
