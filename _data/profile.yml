@@ -25,12 +25,6 @@ experience:
       - 시스템 로그 분석을 통한 보안 위협 탐지
       - 부대 정보보호 정책 관리
     tags: [CERT, Log Analysis, Security Policy]
-  - org: 성빈수학학원
-    role: 조교
-    period: "2021.05 ~ 2022.01"
-    items:
-      - 학생 문제 풀이 지도 및 수업 운영 보조
-    tags: [Teaching]
 
 projects:
   - name: 말씨
@@ -126,11 +120,3 @@ skills:
     items: [PyTorch]
   - group: Etc
     items: [Unity, Arduino]
-
-contact:
-  - label: GitHub
-    icon: fab fa-github
-    url: https://github.com/CodeBlue0
-  - label: RSS
-    icon: fas fa-rss
-    url: /feed.xml
