@@ -39,8 +39,8 @@ key: page-about
     <p class="about-card__role">{{ p.role }}</p>
     <p class="about-card__tagline">{{ p.tagline }}</p>
     <div class="about-contacts" aria-label="연락처">
-      <a class="about-contact about-contact--email" href="mailto:{{ p.email | escape }}"><i class="fas fa-envelope" aria-hidden="true"></i><span>{{ p.email | escape }}</span></a>
-      <a class="about-contact about-contact--linkedin" href="{{ p.linkedin | escape }}"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
+      <a class="button about-contact about-contact--email" href="mailto:{{ p.email | escape }}"><i class="fas fa-envelope" aria-hidden="true"></i><span>{{ p.email | escape }}</span></a>
+      <a class="button about-contact about-contact--linkedin" href="{{ p.linkedin | escape }}"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
     </div>
   </div>
 </div>

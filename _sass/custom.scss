@@ -140,7 +140,7 @@
   gap: .6rem;
   margin-top: 1rem;
 }
-.about .about-contact {
+.about .about-contacts .about-contact {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -155,19 +155,22 @@
   text-decoration: none;
   transition: background-color .15s, border-color .15s;
   i { font-size: 1rem; }
+  &:hover, &:focus, &:active { text-decoration: none; }
   &:focus-visible { outline: 3px solid #0a66c2; outline-offset: 3px; }
 }
-.about .about-contact--email {
+.about .about-contacts .about-contact--email {
   color: #17634f;
   background: #e5f3ec;
   border-color: #c7e4d6;
-  &:hover { color: #124d3e; background: #d4ebdf; border-color: #9bceB6; }
+  &:hover, &:focus, &:active { color: #17634f; }
+  &:hover { background: #dcefe4; border-color: #b4d8c5; }
 }
-.about .about-contact--linkedin {
+.about .about-contacts .about-contact--linkedin {
   color: #fff;
   background: #0a66c2;
   border-color: #0a66c2;
-  &:hover { color: #fff; background: #084f96; border-color: #084f96; }
+  &:hover, &:focus, &:active { color: #fff; }
+  &:hover { background: #095eb3; border-color: #095eb3; }
 }
 .about-interests { margin: .4rem 0 0 !important; padding: 0 !important; list-style: none; li { display: inline-block; margin: 0 .3rem .3rem 0 !important; &::before { display: none; } } }
 .about-meta { margin-top: -.4rem !important; font-size: map-get($base, font-size-sm); color: $text-color-l; }
