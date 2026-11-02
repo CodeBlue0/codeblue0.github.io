@@ -23,7 +23,10 @@ Redteam Agent와 Blueteam Agent가 서로를 기만하는 것에 대해서도 �
 
 ## 산출물
 
-공부 및 프로젝트를 진행하면서 쓰는 블로그, 돈과 시간이 된다면 COAE & CPTS 자격증, 기업 시스템(내부 AI 서비스 포함) 및 Blue Team & Red Team 프로세스 환경 구축, 평가 방법론 관련 논문 한 편
+* 공부 및 프로젝트를 진행하면서 쓰는 블로그
+* 돈과 시간이 된다면 COAE & CPTS 자격증
+* 기업 시스템(내부 AI 서비스 포함) 및 Blue Team & Red Team 프로세스 환경 구축
+* 평가 방법론 관련 논문 한 편
 
 ## 의의
 
@@ -33,18 +36,18 @@ Redteam Agent와 Blueteam Agent가 서로를 기만하는 것에 대해서도 �
 
 <style>
 .article--post .article__content .coae-start-note {
-  color: #555;
-  font-size: 16px;
-  line-height: 1.9;
+  color: #5c5c5c;
+  font-size: 15px;
+  line-height: 28px;
 }
 .article--post .article__content .coae-start-note > h2 {
-  margin: 72px 0 36px;
+  margin: 80px 0 28px;
   padding: 0;
   border: 0;
   color: inherit;
-  font-size: 23px;
+  font-size: 20.16px;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 30px;
 }
 .article--post .article__content .coae-start-note > h2:first-child {
   margin-top: 24px;
@@ -52,10 +55,18 @@ Redteam Agent와 Blueteam Agent가 서로를 기만하는 것에 대해서도 �
 .article--post .article__content .coae-start-note > p {
   margin: 0 0 28px;
 }
+.article--post .article__content .coae-start-note > ul {
+  margin: 0 0 28px;
+  padding-left: 1.4em;
+  list-style-type: disc;
+}
 @media (max-width: 767px) {
+  .article--post .article__content .coae-start-note {
+    line-height: 23px;
+  }
   .article--post .article__content .coae-start-note > h2 {
     margin: 56px 0 28px;
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 </style>
