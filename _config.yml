@@ -218,14 +218,14 @@ defaults:
       layout: article
       comment: true
       sharing: true
-      license: true
+      license: false
       aside:
         toc: true
       sidebar:
         type: blog
-      show_author_profile: true
+      show_author_profile: false
       show_edit_on_github: true
-      show_subscribe: true
+      show_subscribe: false
       pageview: true
 
 

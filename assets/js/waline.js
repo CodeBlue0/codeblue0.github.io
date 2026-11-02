@@ -15,12 +15,14 @@ if (container) {
       nick: '닉네임 (선택)',
       nickError: '닉네임을 확인해 주세요.',
       anonymous: '익명',
-      placeholder: '로그인 없이 댓글을 남겨 주세요. 닉네임은 생략해도 됩니다.',
+      placeholder: '댓글을 남겨 주세요.',
+      sofa: '',
     },
     imageUploader: false,
     search: false,
     reaction: false,
     pageview: false,
     comment: false,
+    noRss: true,
   });
 }

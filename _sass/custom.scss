@@ -199,4 +199,9 @@
   .about-card .about-card__name { font-size: 1.25rem; }
 }
 
+/* Keep the comment editor quiet when there are no comments yet. */
+#waline {
+  .wl-empty:empty, .wl-text-number { display: none; }
+}
+
 /* end custom scss snippet */
