@@ -134,11 +134,47 @@
 }
 .about-card__role { margin-top: .1rem !important; font-size: map-get($base, font-size-sm); color: $main-color-1; }
 .about-card__tagline { margin-top: .4rem !important; font-size: map-get($base, font-size-sm); color: $text-color-l; }
+.about-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1rem;
+}
+.about .about-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  min-height: 2.75rem;
+  padding: .5rem .9rem;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  font-size: .85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background-color .15s, border-color .15s;
+  i { font-size: 1rem; }
+  &:focus-visible { outline: 3px solid #0a66c2; outline-offset: 3px; }
+}
+.about .about-contact--email {
+  color: #17634f;
+  background: #e5f3ec;
+  border-color: #c7e4d6;
+  &:hover { color: #124d3e; background: #d4ebdf; border-color: #9bceB6; }
+}
+.about .about-contact--linkedin {
+  color: #fff;
+  background: #0a66c2;
+  border-color: #0a66c2;
+  &:hover { color: #fff; background: #084f96; border-color: #084f96; }
+}
 .about-interests { margin: .4rem 0 0 !important; padding: 0 !important; list-style: none; li { display: inline-block; margin: 0 .3rem .3rem 0 !important; &::before { display: none; } } }
 .about-meta { margin-top: -.4rem !important; font-size: map-get($base, font-size-sm); color: $text-color-l; }
 
 @include media-breakpoint-down(md) {
   .about-card { flex-direction: column; text-align: center; }
+  .about-contacts { justify-content: center; }
 }
 
 /* Compact headings on the about page */
