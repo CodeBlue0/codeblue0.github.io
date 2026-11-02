@@ -5,4 +5,11 @@ layout: archive
 
 {{ content }}
 
-{% include posts-taxonomy.html locale=locale taxonomies=site.categories %}
+{% assign parent_names = site.data.categories | map: "name" %}
+{% assign visible_categories = "" | split: "," %}
+{% for category in site.categories %}
+  {% unless parent_names contains category[0] %}
+    {% assign visible_categories = visible_categories | push: category %}
+  {% endunless %}
+{% endfor %}
+{% include posts-taxonomy.html locale=locale taxonomies=visible_categories %}
