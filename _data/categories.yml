@@ -1,0 +1,4 @@
+# 글이 없어도 표시할 카테고리. 글의 categories: [상위, 하위]와 함께 사용한다.
+- name: AI Security
+  children:
+    - COAE

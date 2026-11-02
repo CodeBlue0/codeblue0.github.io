@@ -1,12 +1,12 @@
 {%- comment -%}
   Blog sidebar: profile, search, category tree with post counts, blog menu.
-  Categories are collected from post front matter (`categories: [Top, Sub]`).
+  Categories combine site data and post front matter (`categories: [Top, Sub]`).
 {%- endcomment -%}
 
 {%- include snippets/get-nav-url.html path='/categories.html' -%}
 {%- assign _categories_url = __return -%}
 
-{%- assign _tops = "" | split: "" -%}
+{%- assign _tops = site.data.categories | map: "name" -%}
 {%- for _post in site.posts -%}
   {%- if _post.categories[0] -%}
     {%- assign _tops = _tops | push: _post.categories[0] -%}
@@ -38,7 +38,9 @@
     <ul class="blog-sidebar__categories">
       {%- for _top in _tops -%}
         {%- assign _top_posts = site.posts | where_exp: "post", "post.categories[0] == _top" -%}
-        {%- assign _subs = "" | split: "" -%}
+        {%- assign _category = site.data.categories | where: "name", _top | first -%}
+        {%- assign _subs = _category.children -%}
+        {%- unless _subs -%}{%- assign _subs = "" | split: "" -%}{%- endunless -%}
         {%- for _post in _top_posts -%}
           {%- if _post.categories[1] -%}
             {%- assign _subs = _subs | push: _post.categories[1] -%}

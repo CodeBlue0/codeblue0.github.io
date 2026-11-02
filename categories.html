@@ -3,9 +3,11 @@ layout: page
 title: 카테고리
 ---
 
-{%- assign _top_categories = "" | split: "" -%}
+{%- assign _top_categories = site.data.categories | map: "name" -%}
 {%- for _post in site.posts -%}
-  {%- assign _top_categories = _top_categories | push: _post.categories[0] -%}
+  {%- if _post.categories[0] -%}
+    {%- assign _top_categories = _top_categories | push: _post.categories[0] -%}
+  {%- endif -%}
 {%- endfor -%}
 {%- assign _top_categories = _top_categories | uniq | sort -%}
 
@@ -19,7 +21,9 @@ title: 카테고리
       {%- include article-list.html articles=_no_sub type='brief' show_info=true -%}
     {%- endif -%}
 
-    {%- assign _subs = "" | split: "" -%}
+    {%- assign _category = site.data.categories | where: "name", _top | first -%}
+    {%- assign _subs = _category.children -%}
+    {%- unless _subs -%}{%- assign _subs = "" | split: "" -%}{%- endunless -%}
     {%- for _post in _top_posts -%}
       {%- if _post.categories.size > 1 -%}{%- assign _subs = _subs | push: _post.categories[1] -%}{%- endif -%}
     {%- endfor -%}
@@ -27,7 +31,11 @@ title: 카테고리
     {%- for _sub in _subs -%}
       {%- assign _sub_posts = _top_posts | where_exp: "post", "post.categories[1] == _sub" -%}
       <h3 id="{{ _top | slugify }}-{{ _sub | slugify }}">{{ _sub }} <small>({{ _sub_posts.size }})</small></h3>
-      {%- include article-list.html articles=_sub_posts type='brief' show_info=true -%}
+      {%- if _sub_posts.size > 0 -%}
+        {%- include article-list.html articles=_sub_posts type='brief' show_info=true -%}
+      {%- else -%}
+        <p>아직 작성된 글이 없습니다.</p>
+      {%- endif -%}
     {%- endfor -%}
   {%- endfor -%}
 </div>
