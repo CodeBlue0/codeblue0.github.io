@@ -1,5 +1,101 @@
 /* start custom scss snippet */
 
+// Match the reference blog's original Spoqa Han Sans (not the Neo variant).
+@font-face {
+  font-family: "Spoqa Han Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://t1.daumcdn.net/tistory_admin/static/webfont/SpoqaHanSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://t1.daumcdn.net/tistory_admin/static/webfont/SpoqaHanSans-Bold.woff") format("woff");
+}
+
+.article--post {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .article__header h1 {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: normal;
+  }
+
+  .article__content {
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: normal;
+
+    > p, .latch-note > p {
+      margin: 0 0 28px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      padding: 0;
+      margin: 52px 0 28px;
+      border: 0;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: normal;
+    }
+
+    h2 { font-size: 23px; }
+    h3 { font-size: 20px; }
+
+    pre {
+      font-size: 14px;
+      line-height: 20px;
+
+      code {
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .article__header h1 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    .article__content { line-height: 23px; }
+  }
+}
+
+.article-list .item {
+  h2.item__header {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+  }
+
+  .item__description .article__content {
+    font-size: 13px;
+    line-height: 23px;
+  }
+
+  @media (max-width: 767px) {
+    h2.item__header {
+      font-size: 17px;
+      line-height: 21px;
+    }
+
+    .item__description .article__content {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+
 /* Blog sidebar (_includes/sidebar/blog.html) */
 .page__sidebar {
   background-color: mix(#000, $background-color, 2%);

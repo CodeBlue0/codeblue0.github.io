@@ -1,11 +1,7 @@
-body:has(.latch-note) .article__header h1{font-size:32px;font-weight:500;line-height:1.5;letter-spacing:-.035em}
 body:has(.latch-note) .article__info{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;border-bottom:1px solid #eee;padding-bottom:20px;margin-bottom:28px}
 body:has(.latch-note) .article__info .menu{float:none;margin:0}
 body:has(.latch-note) .article__info .left-col .button{background:transparent;border:0;border-radius:0;padding:0 10px 0 0;color:#439aca;font-size:14px;font-weight:400;box-shadow:none}
 body:has(.latch-note) .article__info .right-col{color:#999;font-size:13px}
-.article__content:has(.latch-note){color:#444;font-size:16px;line-height:1.95;letter-spacing:-.015em}
-.article__content:has(.latch-note)>p,.latch-note>p{margin:0 0 2rem}
-.latch-note h2{margin:3.5rem 0 1.5rem;padding:0;border:0;font-size:22px;font-weight:600;letter-spacing:-.025em;color:#333}
 .latch-note a{color:#439aca;text-decoration:none;border-bottom:1px solid transparent}
 .latch-note a:hover{border-bottom-color:currentColor}
 .latch-note pre{margin:1.8rem 0 2.4rem;border:1px solid #e8e8e8;border-radius:0;box-shadow:none;background:#f8f8f8;font-size:14px;line-height:1.8}
@@ -37,5 +33,4 @@ body:has(.latch-note) .article__info .right-col{color:#999;font-size:13px}
 .latch-lab .latch-lab__history ol{display:flex;flex-wrap:wrap;gap:5px 15px;list-style:none;padding:0;margin:5px 0}
 .latch-lab .latch-lab__history li{padding:0;margin:0;font-family:ui-monospace,monospace;color:#555}
 .latch-lab .latch-lab__footnote{font-size:14px;line-height:1.8;color:#777;margin:12px 0 0}
-@media(max-width:600px){.latch-lab .latch-lab__controls{grid-template-columns:repeat(2,minmax(0,1fr))}.latch-note h2{font-size:20px}.latch-note pre{font-size:13px}.latch-note table th,.latch-note table td{padding:.6rem .4rem}}
-@media(max-width:600px){body:has(.latch-note) .article__header h1{font-size:28px}}
+@media(max-width:600px){.latch-lab .latch-lab__controls{grid-template-columns:repeat(2,minmax(0,1fr))}.latch-note pre{font-size:13px}.latch-note table th,.latch-note table td{padding:.6rem .4rem}}
