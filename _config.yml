@@ -118,7 +118,10 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: waline # false, "disqus", "gitalk", "valine", "waline", "custom"
+
+  waline:
+    server_url: https://codeblue0-comments.vercel.app
 
   ## Disqus
   disqus:
@@ -200,6 +203,7 @@ exclude:
   - /screenshots
   - /test
   - /vendor
+  - /services
 
 defaults:
   - scope:
@@ -212,6 +216,7 @@ defaults:
       type: posts
     values:
       layout: article
+      comment: true
       sharing: true
       license: true
       aside:

@@ -1,0 +1,8 @@
+{%- if site.comments.waline.server_url and site.comments.waline.server_url != '' -%}
+  {%- if page.collection == 'posts' or page.comment == true -%}
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@3.16.1/dist/waline.css">
+    <div id="waline" data-server-url="{{ site.comments.waline.server_url | escape }}" data-path="{{ page.url | relative_url | escape }}"></div>
+    <script type="module" src="{{ '/assets/js/waline.js' | relative_url }}"></script>
+    <noscript>댓글을 보려면 자바스크립트를 활성화해 주세요.</noscript>
+  {%- endif -%}
+{%- endif -%}
