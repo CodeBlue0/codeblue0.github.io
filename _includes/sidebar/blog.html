@@ -1,6 +1,7 @@
 {%- comment -%}
   Blog sidebar: profile, search, category tree with post counts, blog menu.
   Categories combine site data and post front matter (`categories: [Top, Sub]`).
+  At most two levels; subcategories are always visible.
 {%- endcomment -%}
 
 {%- include snippets/get-nav-url.html path='/' -%}
@@ -47,7 +48,6 @@
           {%- endif -%}
         {%- endfor -%}
         {%- assign _subs = _subs | uniq | sort -%}
-        {%- assign _top_id = _top | slugify -%}
         {%- if page.categories[0] == _top -%}
           {%- assign _top_active = true -%}
         {%- else -%}
@@ -55,23 +55,16 @@
         {%- endif -%}
 
         <li class="blog-sidebar__category{% if _top_active %} active{% endif %}">
-          {%- if _subs.size > 0 -%}
-          <details{% if _top_active %} open{% endif %}>
-            <summary>
-              <a href="{{ _home_url }}?category={{ _top | url_encode }}">{{ _top }} <span class="blog-sidebar__count">({{ _top_posts.size }})</span></a>
-              <i class="fas fa-angle-right blog-sidebar__chevron"></i>
-            </summary>
-            <ul class="blog-sidebar__subcategories">
-              {%- for _sub in _subs -%}
-                {%- assign _sub_posts = _top_posts | where_exp: "post", "post.categories[1] == _sub" -%}
-                <li class="{% if _top_active and page.categories[1] == _sub %}active{% endif %}">
-                  <a href="{{ _home_url }}?category={{ _top | url_encode }}&amp;sub={{ _sub | url_encode }}">{{ _sub }} <span class="blog-sidebar__count">({{ _sub_posts.size }})</span></a>
-                </li>
-              {%- endfor -%}
-            </ul>
-          </details>
-          {%- else -%}
           <a href="{{ _home_url }}?category={{ _top | url_encode }}">{{ _top }} <span class="blog-sidebar__count">({{ _top_posts.size }})</span></a>
+          {%- if _subs.size > 0 -%}
+          <ul class="blog-sidebar__subcategories">
+            {%- for _sub in _subs -%}
+              {%- assign _sub_posts = _top_posts | where_exp: "post", "post.categories[1] == _sub" -%}
+              <li class="{% if _top_active and page.categories[1] == _sub %}active{% endif %}">
+                <a href="{{ _home_url }}?category={{ _top | url_encode }}&amp;sub={{ _sub | url_encode }}">{{ _sub }} <span class="blog-sidebar__count">({{ _sub_posts.size }})</span></a>
+              </li>
+            {%- endfor -%}
+          </ul>
           {%- endif -%}
         </li>
       {%- endfor -%}

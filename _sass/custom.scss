@@ -177,25 +177,8 @@
 .blog-sidebar__menu {
   li { padding: .25rem 0; }
 }
-.blog-sidebar__category {
-  details > summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-    cursor: pointer;
-    &::-webkit-details-marker { display: none; }
-  }
-  details[open] .blog-sidebar__chevron { transform: rotate(90deg); }
-  &.active > a,
-  &.active > details > summary > a {
-    font-weight: map-get($base, font-weight-bold);
-  }
-}
-.blog-sidebar__chevron {
-  font-size: map-get($base, font-size-xs);
-  color: $text-color-l;
-  transition: transform .15s;
+.blog-sidebar__category.active > a {
+  font-weight: map-get($base, font-weight-bold);
 }
 .blog-sidebar__subcategories {
   padding-left: map-get($spacers, 3) !important;

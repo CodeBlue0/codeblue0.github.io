@@ -19,8 +19,6 @@
   document.querySelectorAll('.blog-sidebar__categories a').forEach(function (link) {
     var url = new URL(link.href);
     if (url.searchParams.get('category') !== category) return;
-    var details = link.closest('details');
-    if (details) details.open = true;
     if ((url.searchParams.get('sub') || '') === sub) {
       link.setAttribute('aria-current', 'page');
       link.closest('li').classList.add('active');
