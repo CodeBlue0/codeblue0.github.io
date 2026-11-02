@@ -3,8 +3,8 @@
   Categories combine site data and post front matter (`categories: [Top, Sub]`).
 {%- endcomment -%}
 
-{%- include snippets/get-nav-url.html path='/categories.html' -%}
-{%- assign _categories_url = __return -%}
+{%- include snippets/get-nav-url.html path='/' -%}
+{%- assign _home_url = __return -%}
 
 {%- assign _tops = site.data.categories | map: "name" -%}
 {%- for _post in site.posts -%}
@@ -34,7 +34,7 @@
   {%- endif -%}
 
   <div class="blog-sidebar__section">
-    <a class="blog-sidebar__all" href="{{ _categories_url }}">분류 전체보기 <span class="blog-sidebar__count">({{ site.posts.size }})</span></a>
+    <a class="blog-sidebar__all" href="{{ _home_url }}">분류 전체보기 <span class="blog-sidebar__count">({{ site.posts.size }})</span></a>
     <ul class="blog-sidebar__categories">
       {%- for _top in _tops -%}
         {%- assign _top_posts = site.posts | where_exp: "post", "post.categories[0] == _top" -%}
@@ -58,20 +58,20 @@
           {%- if _subs.size > 0 -%}
           <details{% if _top_active %} open{% endif %}>
             <summary>
-              <a href="{{ _categories_url }}#{{ _top_id }}">{{ _top }} <span class="blog-sidebar__count">({{ _top_posts.size }})</span></a>
+              <a href="{{ _home_url }}?category={{ _top | url_encode }}">{{ _top }} <span class="blog-sidebar__count">({{ _top_posts.size }})</span></a>
               <i class="fas fa-angle-right blog-sidebar__chevron"></i>
             </summary>
             <ul class="blog-sidebar__subcategories">
               {%- for _sub in _subs -%}
                 {%- assign _sub_posts = _top_posts | where_exp: "post", "post.categories[1] == _sub" -%}
                 <li class="{% if _top_active and page.categories[1] == _sub %}active{% endif %}">
-                  <a href="{{ _categories_url }}#{{ _top_id }}-{{ _sub | slugify }}">{{ _sub }} <span class="blog-sidebar__count">({{ _sub_posts.size }})</span></a>
+                  <a href="{{ _home_url }}?category={{ _top | url_encode }}&amp;sub={{ _sub | url_encode }}">{{ _sub }} <span class="blog-sidebar__count">({{ _sub_posts.size }})</span></a>
                 </li>
               {%- endfor -%}
             </ul>
           </details>
           {%- else -%}
-          <a href="{{ _categories_url }}#{{ _top_id }}">{{ _top }} <span class="blog-sidebar__count">({{ _top_posts.size }})</span></a>
+          <a href="{{ _home_url }}?category={{ _top | url_encode }}">{{ _top }} <span class="blog-sidebar__count">({{ _top_posts.size }})</span></a>
           {%- endif -%}
         </li>
       {%- endfor -%}
