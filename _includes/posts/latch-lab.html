@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="{{ '/assets/posts/latch/lab.css' | relative_url }}">
+<section class="latch-lab" id="latch-lab" aria-label="NOR형 SR 래치 실험">
+  <div class="latch-lab__heading"><span>INTERACTIVE NOTE / 01</span><span>NOR · SR LATCH</span></div>
+  <h3>입력은 사라져도, 상태는 남는다.</h3>
+  <p class="latch-lab__intro">Set을 누른 뒤 유지로 바꿔보세요. 선의 숫자는 안정된 뒤의 논리값입니다.</p>
+  <div class="latch-lab__controls" role="group" aria-label="S와 R 입력 조합">
+    <button type="button" data-s="1" data-r="0" aria-pressed="false">Set <small>10</small></button>
+    <button type="button" data-s="0" data-r="0" aria-pressed="true">유지 <small>00</small></button>
+    <button type="button" data-s="0" data-r="1" aria-pressed="false">Reset <small>01</small></button>
+    <button type="button" data-s="1" data-r="1" aria-pressed="false">금지 입력 <small>11</small></button>
+  </div>
+  <svg class="latch-lab__circuit" viewBox="0 0 560 275" role="img" aria-labelledby="latch-circuit-title latch-circuit-desc">
+    <title id="latch-circuit-title">출력을 서로 되먹임하는 두 NOR 게이트</title>
+    <desc id="latch-circuit-desc">위 게이트에 R과 아래 출력이 들어가 Q를 만들고, 아래 게이트에 S와 Q가 들어가 Q bar를 만듭니다. 현재 값은 그림 아래 상태 설명에서도 확인할 수 있습니다.</desc>
+    <g class="latch-lab__wire"><path d="M65 64H210 M65 204H210"/><path data-wire="q" d="M335 84H490 M388 84V142L167 175V244H210"/><path data-wire="qb" d="M335 224H490 M365 224V161L145 126V104H210"/></g>
+    <g class="latch-lab__gate"><path d="M210 44Q245 84 210 124Q280 124 320 84Q280 44 210 44Z"/><circle cx="328" cy="84" r="7"/><path d="M210 184Q245 224 210 264Q280 264 320 224Q280 184 210 184Z"/><circle cx="328" cy="224" r="7"/></g>
+    <g class="latch-lab__labels"><text x="32" y="70">R</text><text x="32" y="210">S</text><text x="260" y="89">NOR</text><text x="260" y="229">NOR</text><text x="500" y="90">Q</text><text x="477" y="252">Q_bar</text></g>
+    <g class="latch-lab__values"><text data-value="r" x="100" y="54">0</text><text data-value="s" x="100" y="194">0</text><text data-value="q" x="435" y="73">0</text><text data-value="qb" x="435" y="213">1</text></g>
+  </svg>
+  <div class="latch-lab__status" role="status" aria-live="polite" aria-atomic="true"><strong data-status-title>HOLD · Q = 0 / Q_bar = 1</strong><span data-status-detail>시작 전 Reset을 가정했습니다. Set을 눌러 첫 값을 남겨보세요.</span></div>
+  <div class="latch-lab__history"><span>최근 입력 → Q</span><ol aria-label="최근 상태 전이 기록"><li>00 → 0</li></ol></div>
+  <p class="latch-lab__footnote">논리 상태만 표현합니다. 전파 지연·전압·준안정성의 시간 변화는 모델링하지 않습니다.</p>
+  <noscript><p>JavaScript가 꺼져 있어 그림은 초기 상태입니다. 아래 상태표에서 각 입력의 결과를 확인할 수 있습니다.</p></noscript>
+</section>
+<script src="{{ '/assets/posts/latch/lab.js' | relative_url }}" defer></script>

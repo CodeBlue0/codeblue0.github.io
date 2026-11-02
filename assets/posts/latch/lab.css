@@ -1,0 +1,28 @@
+.latch-lab{--ink:#243e39;--muted:#58716a;--accent:#246b56;margin:2rem 0;padding:clamp(18px,4vw,32px);border:1px solid #cdd9d0;border-radius:8px;background:#f6f8f3;color:var(--ink);font-family:inherit;isolation:isolate}
+.latch-lab .latch-lab__heading{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font:600 10px/1.5 ui-monospace,monospace;letter-spacing:.1em;color:var(--muted)}
+.latch-lab h3{margin:18px 0 10px;font-size:clamp(19px,3vw,25px);line-height:1.5;letter-spacing:-.04em;color:var(--ink)}
+.latch-lab .latch-lab__intro{font-size:14px;line-height:1.8;color:var(--muted);margin:0 0 22px}
+.latch-lab .latch-lab__controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.latch-lab .latch-lab__controls button{appearance:none;cursor:pointer;border:1px solid #b9c8bd;border-radius:4px;background:#fff;color:var(--ink);padding:12px 5px;font-family:inherit;font-size:13px;font-weight:600;line-height:1.4;min-height:48px;transition:background .15s,color .15s}
+.latch-lab .latch-lab__controls button small{display:block;font:11px/1.6 ui-monospace,monospace;opacity:.8}
+.latch-lab .latch-lab__controls button:hover{background:#e5eee4}
+.latch-lab .latch-lab__controls button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.latch-lab .latch-lab__controls button:focus-visible{outline:3px solid #267357;outline-offset:3px}
+.latch-lab .latch-lab__circuit{display:block;width:100%;height:auto;margin:20px 0;overflow:visible}
+.latch-lab .latch-lab__wire{stroke:#94a99d;stroke-width:2;fill:none}
+.latch-lab [data-wire][data-level="1"]{stroke:#216b50;stroke-width:3}
+.latch-lab [data-wire][data-level="?"]{stroke:#97612c;stroke-dasharray:5 5}
+.latch-lab .latch-lab__gate{stroke:var(--ink);stroke-width:2;fill:#f6f8f3}
+.latch-lab .latch-lab__labels{fill:var(--ink);font:14px ui-monospace,monospace}
+.latch-lab .latch-lab__labels text:nth-child(3),.latch-lab .latch-lab__labels text:nth-child(4){text-anchor:middle;font-size:12px}
+.latch-lab .latch-lab__values{fill:var(--accent);font:600 21px ui-monospace,monospace}
+.latch-lab .latch-lab__status{display:grid;gap:8px;padding:16px 0;border-top:1px solid #cdd9d0;border-bottom:1px solid #cdd9d0}
+.latch-lab .latch-lab__status strong{font:600 14px/1.6 ui-monospace,monospace}
+.latch-lab .latch-lab__status span{font-size:13px;line-height:1.8}
+.latch-lab[data-invalid=true] .latch-lab__status{color:#805017}
+.latch-lab .latch-lab__history{margin-top:17px;font:11px/1.8 ui-monospace,monospace;color:var(--muted)}
+.latch-lab .latch-lab__history ol{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:7px 0}
+.latch-lab .latch-lab__history li{padding:3px 8px;margin:0;background:#e7eee3;border-radius:3px}
+.latch-lab .latch-lab__footnote{font-size:11px;line-height:1.8;color:var(--muted);margin:17px 0 0}
+@media(max-width:400px){.latch-lab .latch-lab__controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.latch-lab .latch-lab__controls button{transition:none}}
