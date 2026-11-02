@@ -6,4 +6,15 @@ search: false
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+// Match the reference typography and sidebar measurements.
+$doc-font-size: 17px;
+$doc-font-size-medium: 17px;
+$doc-font-size-large: 17px;
+$doc-font-size-x-large: 17px;
+$right-sidebar-width-narrow: 200px;
+$right-sidebar-width: 200px;
+$right-sidebar-width-wide: 100px;
+
 @import "minimal-mistakes"; // main partials
+@import "codeblue-reference";
+@import "codeblue-about";

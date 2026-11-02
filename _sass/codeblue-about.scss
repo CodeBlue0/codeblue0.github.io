@@ -1,0 +1,107 @@
+/* Keep the existing profile content within the compact, light theme. */
+.page__content .about {
+  .about-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25em;
+    margin: 1.5em 0 2em;
+    padding: 1.25em;
+    background: mix($background-color, $primary-color, 94%);
+    border-radius: $border-radius;
+
+    > img {
+      flex: 0 0 96px;
+      width: 96px;
+      height: 96px;
+      margin: 0;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    > div {
+      min-width: 0;
+    }
+
+    p {
+      margin: 0 0 0.5em;
+    }
+  }
+
+  .about-card__name {
+    font-size: 1.25em;
+    font-weight: 700;
+
+    span {
+      display: inline-block;
+      margin-inline-start: 0.4em;
+      color: $muted-text-color;
+      font-size: 0.75em;
+      font-weight: 400;
+    }
+  }
+
+  .about-card__role,
+  .about-meta {
+    color: $muted-text-color;
+    font-size: 0.875em;
+  }
+
+  .about-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
+    margin-top: 0.75em;
+  }
+
+  .about-contact {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4em;
+    min-width: 0;
+    color: $link-color;
+    font-size: 0.875em;
+    overflow-wrap: anywhere;
+
+    span {
+      min-width: 0;
+    }
+  }
+
+  .about-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em 0.75em;
+    margin: 1em 0 2em;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0;
+      color: $muted-text-color;
+      font-size: 0.875em;
+    }
+  }
+
+  h3 + .about-meta {
+    margin-top: -0.4em;
+    margin-bottom: 0.75em;
+  }
+
+  @media (max-width: 600px) {
+    .about-card {
+      flex-direction: column;
+      gap: 1em;
+      padding: 1em;
+
+      > img {
+        flex-basis: auto;
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .about-card__name span {
+      margin-inline-start: 0;
+    }
+  }
+}

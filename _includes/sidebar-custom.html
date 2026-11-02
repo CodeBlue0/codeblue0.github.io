@@ -1,0 +1,17 @@
+{% if page.collection == 'posts' %}
+<nav class="codeblue-categories" aria-label="카테고리">
+  <p class="codeblue-categories__total">📂 전체 글 수 {{ site.posts | size }}개</p>
+  {% for group in site.data.categories %}
+    {% assign group_count = site.categories[group.name] | size %}
+    <div class="codeblue-categories__group">
+      {% if group_count > 0 %}<a class="codeblue-categories__heading" href="{{ '/categories/' | relative_url }}#{{ group.name | slugify }}">{% else %}<span class="codeblue-categories__heading">{% endif %}{{ group.name | escape }} <span class="codeblue-categories__count">({{ group_count }})</span>{% if group_count > 0 %}</a>{% else %}</span>{% endif %}
+      <ul>
+        {% for child in group.children %}
+          {% assign child_count = site.categories[child] | size %}
+          <li>{% if child_count > 0 %}<a href="{{ '/categories/' | relative_url }}#{{ child | slugify }}">{% endif %}{{ child | escape }} <span class="codeblue-categories__count">({{ child_count }})</span>{% if child_count > 0 %}</a>{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</nav>
+{% endif %}

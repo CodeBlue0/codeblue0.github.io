@@ -10,6 +10,7 @@ url: https://codeblue0.github.io
 baseurl: ""
 repository: CodeBlue0/codeblue0.github.io
 words_per_minute: 200
+breadcrumbs: true
 search: true
 search_full_content: true
 search_provider: lunr
@@ -64,6 +65,8 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
+      show_date: true
+      toc_icon: bookmark
       comments: true
       share: true
       related: true
