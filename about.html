@@ -1,39 +1,17 @@
 ---
-layout: article
-article_header: false
-aside:
-  toc: true
-titles:
-  # @start locale config
-  en      : &EN       About
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
-  zh-Hans : &ZH_HANS  关于
-  zh      : *ZH_HANS
-  zh-CN   : *ZH_HANS
-  zh-SG   : *ZH_HANS
-  zh-Hant : &ZH_HANT  關於
-  zh-TW   : *ZH_HANT
-  zh-HK   : *ZH_HANT
-  ko      : &KO       소개
-  ko-KR   : *KO
-  fr      : &FR       À propos
-  fr-BE   : *FR
-  fr-CA   : *FR
-  fr-CH   : *FR
-  fr-FR   : *FR
-  fr-LU   : *FR
-  # @end locale config
-key: page-about
+layout: single
+title: "About Me"
+permalink: /about.html
+author_profile: true
+toc: true
 ---
+
 
 {%- assign p = site.data.profile -%}
 <div class="about">
-{%- include snippets/get-nav-url.html path=site.author.avatar -%}
+
 <div class="about-card">
-  <img src="{{ __return }}" alt="{{ p.name }}" />
+  <img src="{{ site.author.avatar | relative_url }}" alt="{{ p.name }}" />
   <div>
     <p class="about-card__name">{{ p.name }} <span>{{ p.name_en }}</span></p>
     <p class="about-card__role">{{ p.role }}</p>

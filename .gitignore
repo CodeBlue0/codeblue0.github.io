@@ -32,6 +32,6 @@ _site/
 .jekyll-metadata
 .jekyll-cache/
 
-vendor/
+/vendor/
 .bundle/
 Gemfile.lock

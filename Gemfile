@@ -1,12 +1,13 @@
 source "https://rubygems.org"
 
-# Theme files are copied into this repo (TeXt "common method"), so only Jekyll and plugins are needed.
+# Minimal Mistakes theme files are vendored locally.
 gem "jekyll", "~> 4.3"
 
 group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-feed"
+  gem "jekyll-include-cache"
   gem "jemoji"
 end
 
