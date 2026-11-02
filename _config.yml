@@ -20,7 +20,14 @@ author:
   name: CodeBlue
   avatar: /assets/images/avatar.jpg
   bio: Security Blog
+  location: Seoul, South Korea
   links:
+    - label: piri007@korea.ac.kr
+      icon: fas fa-fw fa-envelope
+      url: mailto:piri007@korea.ac.kr
+    - label: Website
+      icon: fas fa-fw fa-link
+      url: https://codeblue0.github.io/
     - label: GitHub
       icon: fab fa-fw fa-github
       url: https://github.com/CodeBlue0
