@@ -35,3 +35,6 @@ _site/
 /vendor/
 .bundle/
 Gemfile.lock
+
+# Unpublished articles kept only on this computer.
+/.local-posts/
