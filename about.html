@@ -38,6 +38,7 @@ key: page-about
     <p class="about-card__name">{{ p.name }} <span>{{ p.name_en }}</span></p>
     <p class="about-card__role">{{ p.role }}</p>
     <p class="about-card__tagline">{{ p.tagline }}</p>
+    <p><a href="mailto:{{ p.email | escape }}">{{ p.email | escape }}</a> · <a href="{{ p.linkedin | escape }}">LinkedIn</a></p>
   </div>
 </div>
 
