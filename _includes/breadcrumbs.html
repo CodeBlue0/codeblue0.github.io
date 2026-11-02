@@ -1,9 +1,9 @@
 {% assign locale = include.locale | default: site.locale %}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ol>
-    <li><a href="{{ '/' | relative_url }}">{{ site.data.ui-text[locale].breadcrumb_home_label | default: 'Home' }}</a></li>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
     {% for category in page.categories %}
-      <li><span class="sep" aria-hidden="true">/</span> <a href="{{ '/categories/' | relative_url }}#{{ category | slugify }}">{{ category | escape }}</a></li>
+      <li><span class="sep" aria-hidden="true">/</span> <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}/">{{ category | escape }}</a></li>
     {% endfor %}
     <li class="current"><span class="sep" aria-hidden="true">/</span> {{ page.title | escape }}</li>
   </ol>

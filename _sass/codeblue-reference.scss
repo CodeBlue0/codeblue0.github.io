@@ -1,39 +1,25 @@
 // Presentation overrides; post/profile text and data remain untouched.
 .page__content > h2 {
+  margin-top: 1em;
   padding-bottom: 0;
   border-bottom: 0;
   font-size: $h-size-1;
-}
-
-.codeblue-categories {
-  margin-top: 1.75em;
-  padding-top: 1em;
-  border-top: 1px solid $border-color;
-
-  .codeblue-categories__total { margin: 0 0 1em; }
-  .codeblue-categories__group { margin: 0 0 1em; }
-  .codeblue-categories__heading { font-size: 1em; font-weight: bold; }
-  ul { margin: .3em 0 0; padding-left: 1em; list-style: none; }
-  li { margin: .3em 0; font-size: 1em; }
-  a { color: inherit; text-decoration: none; overflow-wrap: anywhere; }
-  a:hover { text-decoration: underline; }
-  a:focus-visible { outline: 2px solid $link-color; outline-offset: 3px; }
-  .codeblue-categories__count { color: $muted-text-color; font-weight: normal; }
-}
-
-@media (max-width: 1023px) {
-  .codeblue-categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5em 2em;
-    clear: both;
-    font-size: .875em;
-    .codeblue-categories__total { flex-basis: 100%; margin-bottom: 0; }
-  }
 }
 
 // Keep category names readable between the tablet and wide desktop layouts.
 @media (min-width: 1024px) and (max-width: 1279px) {
   .page { padding-inline-end: 100px; }
   .sidebar__right { width: 100px; margin-inline-end: -100px; }
+}
+
+// Match the original theme's compact post navigation and notice palette.
+.codeblue-categories a { overflow-wrap: anywhere; }
+#waline {
+  --waline-font-size: 14px;
+  --waline-theme-color: #52adc8;
+  --waline-active-color: #3d8ca3;
+  --waline-border-color: #f2f3f3;
+  --waline-border: 1px solid var(--waline-border-color);
+  --waline-box-shadow: none;
+  font-family: $global-font-family;
 }

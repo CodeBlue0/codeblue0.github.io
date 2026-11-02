@@ -1,7 +1,8 @@
 ---
 title: "COAE를 시작하며"
 categories: ["AI Security", "[HTB] COAE"]
-permalink: /2026/11/02/coae-start.html
+permalink: /ai-security/htb-coae/coae-start/
+comment_path: /2026/11/02/coae-start.html
 excerpt: "현재의 보안이 어떤 식으로 이루어지는지 넓게 살펴보고자 하는 것이 목표입니다."
 toc: true
 toc_sticky: true

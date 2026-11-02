@@ -35,7 +35,7 @@ comments:
     server_url: https://codeblue0-comments.vercel.app
 markdown: kramdown
 highlighter: rouge
-permalink: date
+permalink: /:categories/:title/
 excerpt_separator: <!--more-->
 paginate: 15
 paginate_path: /page:num/
