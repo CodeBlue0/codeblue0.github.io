@@ -3,7 +3,7 @@
 # 글이 없어도 표시하며, 사이드바에서 하위 분류는 항상 펼쳐 둔다.
 - name: AI Security
   children:
-    - COAE
+    - "[HTB] COAE"
 - name: RedTeam
   children:
-    - CPTS
+    - "[HTB] CPTS"
