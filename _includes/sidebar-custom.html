@@ -1,4 +1,4 @@
-{% if page.collection == 'posts' %}
+{% if page.collection == 'posts' or page.layout == 'category' %}
 <nav class="nav__list codeblue-categories" aria-label="카테고리">
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>

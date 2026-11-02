@@ -1,4 +1,6 @@
 // Presentation overrides; post/profile text and data remain untouched.
+// The reference removes default link underlines; component hover/focus rules remain.
+a { text-decoration: none; }
 .page__content > h2 {
   margin-top: 1em;
   padding-bottom: 0;
@@ -6,20 +8,8 @@
   font-size: $h-size-1;
 }
 
-// Keep category names readable between the tablet and wide desktop layouts.
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .page { padding-inline-end: 100px; }
-  .sidebar__right { width: 100px; margin-inline-end: -100px; }
-}
-
-// Match the original theme's compact post navigation and notice palette.
+// Reuse the reference navigation; wrap personal labels at the narrow breakpoint.
 .codeblue-categories a { overflow-wrap: anywhere; }
-#waline {
-  --waline-font-size: 14px;
-  --waline-theme-color: #52adc8;
-  --waline-active-color: #3d8ca3;
-  --waline-border-color: #f2f3f3;
-  --waline-border: 1px solid var(--waline-border-color);
-  --waline-box-shadow: none;
-  font-family: $global-font-family;
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .sidebar .author__urls li { white-space: normal; overflow-wrap: anywhere; }
 }

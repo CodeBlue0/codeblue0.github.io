@@ -4,6 +4,7 @@ locale: ko-KR
 lang: ko-KR
 timezone: Asia/Seoul
 title: CodeBlue
+title_separator: "|"
 name: CodeBlue
 description: Security Blog
 url: https://codeblue0.github.io

@@ -3,7 +3,7 @@ layout: single
 title: "About Me"
 permalink: /about/
 author_profile: true
-toc: true
+toc: false
 ---
 
 
@@ -23,12 +23,16 @@ toc: true
   </div>
 </div>
 
+<section class="about-section about-section--primary">
 <h2 id="introduction">Introduction</h2>
 {%- for _line in p.about -%}<p>{{ _line }}</p>{%- endfor -%}
 <ul class="menu about-interests">
   {%- for _t in p.interests -%}<li><span class="button button--secondary button--pill button--sm">{{ _t }}</span></li>{%- endfor -%}
 </ul>
 
+</section>
+
+<section class="about-section about-section--info">
 <h2 id="experience">Experience</h2>
 {%- for _x in p.experience -%}
 <h3 id="exp-{{ forloop.index }}">{{ _x.org }}</h3>
@@ -36,6 +40,9 @@ toc: true
 <ul>{%- for _i in _x.items -%}<li>{{ _i }}</li>{%- endfor -%}</ul>
 {%- endfor -%}
 
+</section>
+
+<section class="about-section about-section--warning">
 <h2 id="projects">Projects</h2>
 {%- for _x in p.projects -%}
 <h3 id="proj-{{ forloop.index }}">{{ _x.name }}</h3>
@@ -44,6 +51,9 @@ toc: true
 <p>{%- for _t in _x.tags -%}<code>{{ _t }}</code> {% endfor -%}</p>
 {%- endfor -%}
 
+</section>
+
+<section class="about-section about-section--info">
 <h2 id="activities">Activities</h2>
 {%- for _x in p.activities -%}
 <h3 id="act-{{ forloop.index }}">{{ _x.org }}</h3>
@@ -51,6 +61,9 @@ toc: true
 <ul>{%- for _i in _x.items -%}<li>{{ _i }}</li>{%- endfor -%}</ul>
 {%- endfor -%}
 
+</section>
+
+<section class="about-section about-section--info">
 <h2 id="education">Education</h2>
 <ul>
 {%- for _e in p.education -%}
@@ -58,6 +71,9 @@ toc: true
 {%- endfor -%}
 </ul>
 
+</section>
+
+<section class="about-section about-section--success">
 <h2 id="awards">Awards</h2>
 <table>
   <thead><tr><th>연도</th><th>수상</th><th>대회</th></tr></thead>
@@ -68,6 +84,9 @@ toc: true
   </tbody>
 </table>
 
+</section>
+
+<section class="about-section about-section--danger">
 <h2 id="certifications">Certifications</h2>
 <table>
   <thead><tr><th>취득</th><th>자격증</th><th>발급 기관</th></tr></thead>
@@ -78,10 +97,14 @@ toc: true
   </tbody>
 </table>
 
+</section>
+
+<section class="about-section about-section--primary">
 <h2 id="skills">Skills</h2>
 <ul>
 {%- for _g in p.skills -%}
   <li><strong>{{ _g.group }}</strong>: {{ _g.items | join: ", " }}</li>
 {%- endfor -%}
 </ul>
+</section>
 </div>

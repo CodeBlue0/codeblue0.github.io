@@ -2,6 +2,7 @@
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ol>
     <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    {% if page.taxonomy %}<li><span class="sep" aria-hidden="true">/</span> <a href="{{ '/categories/' | relative_url }}">Categories</a></li>{% endif %}
     {% for category in page.categories %}
       <li><span class="sep" aria-hidden="true">/</span> <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}/">{{ category | escape }}</a></li>
     {% endfor %}

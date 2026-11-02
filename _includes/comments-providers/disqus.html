@@ -5,7 +5,7 @@
       this.page.url = {{ page.url | absolute_url | jsonify }};
       this.page.identifier = {{ page.comment_path | default: page.id | default: page.url | jsonify }};
       this.page.title = {{ page.title | jsonify }};
-      this.language = 'ko';
+      this.language = 'en';
     };
     (function () {
       var d = document, s = d.createElement('script');
