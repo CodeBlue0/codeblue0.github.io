@@ -4,3 +4,6 @@
 - name: AI Security
   children:
     - COAE
+- name: RedTeam
+  children:
+    - CPTS
