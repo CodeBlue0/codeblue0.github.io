@@ -37,10 +37,6 @@ footer:
     - label: GitHub
       icon: fab fa-fw fa-github
       url: https://github.com/CodeBlue0
-comments:
-  provider: disqus
-  disqus:
-    shortname: codeblue
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
@@ -57,7 +53,6 @@ include:
   - _pages
 exclude:
   - vendor
-  - services
   - node_modules
   - Gemfile
   - Gemfile.lock
@@ -75,7 +70,6 @@ defaults:
       read_time: true
       show_date: true
       toc_icon: bookmark
-      comments: true
       share: false
       related: true
       toc: true

@@ -20,13 +20,11 @@ node_modules/
 
 yarn.lock
 package-lock.json
-!services/waline/package-lock.json
 Gemfile.lock
 
 .vercel/
 .env
 .env.*
-!.env.example
 
 _site/
 .jekyll-metadata
